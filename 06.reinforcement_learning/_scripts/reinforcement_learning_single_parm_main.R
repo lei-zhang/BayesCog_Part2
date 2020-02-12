@@ -14,7 +14,7 @@ run_rl_sp <- function(multiSubj = FALSE) {
     # clear workspace
     library(rstan)
     library(ggplot2)
-    library(R.matlab)
+    # library(R.matlab)
     
     if (multiSubj==FALSE) {
         load('_data/rl_sp_ss.RData')
@@ -41,7 +41,7 @@ run_rl_sp <- function(multiSubj = FALSE) {
     #### Running Stan #### 
     # =============================================================================
     rstan_options(auto_write = TRUE)
-    options(mc.cores = 2)
+    options(mc.cores = 4)
     
     if (multiSubj==FALSE) {
         modelFile <- '_scripts/reinforcement_learning_sp_ss_model.stan'
