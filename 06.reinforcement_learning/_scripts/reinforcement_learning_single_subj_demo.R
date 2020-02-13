@@ -23,6 +23,9 @@ dataList <- list(nTrials=nTrials,
                  choice=rl_ss[,1], 
                  reward=rl_ss[,2])
 
+# get variable names
+str(dataList)
+
 # =============================================================================
 #### Running Stan #### 
 # =============================================================================
@@ -35,7 +38,7 @@ nIter     <- 2000
 nChains   <- 4 
 nWarmup   <- floor(nIter/2)
 nThin     <- 1
-pars      <- c('alpha','tau','v','pe','y_pred','acc', 'v_chn')
+pars      <- c('alpha','tau','v','pe','y_pred','acc', 'v_chn', 'log_lik')
 
 cat("Estimating", modelFile, "model... \n")
 startTime = Sys.time(); print(startTime)

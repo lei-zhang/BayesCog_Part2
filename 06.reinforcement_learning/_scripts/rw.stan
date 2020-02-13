@@ -18,7 +18,8 @@ model {
     v = rep_vector(0, 2);
     
     for (t in 1:nTrials) {
-        choice[t] ~ categorical(softmax(tau*v));
+        // choice[t] ~ categorical(softmax(tau*v));
+        choice[t] ~ categorical_logit(tau*v);
         
         pe = reward[t] - v[choice[t]]; // prediction error
         v[choice[t]] = v[choice[t]] + alpha * pe; // value update
@@ -31,11 +32,15 @@ generated quantities {
     int  y_pred[nTrials];
     real v_chn[nTrials];
     real acc[nTrials];
+    real log_lik;
     
     v[1] = rep_vector(0, 2);
+    log_lik = 0;
     
     for (t in 1:nTrials) {
-        y_pred[t] = categorical_rng(softmax(tau*v[t]));
+        // y_pred[t] = categorical_rng(softmax(tau*v[t]));
+        y_pred[t] = categorical_logit_rng(tau*v[t]);
+        log_lik = log_lik + categorical_logit_lpmf(choice[t] | tau*v[t]); // --> p(D|theta)
         
         v_chn[t] = v[t, choice[t]];
            
