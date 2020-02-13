@@ -26,10 +26,8 @@ transformed parameters {
   vector<lower=0,upper=1>[nSubjects] lr;
   vector<lower=0,upper=3>[nSubjects] tau;
   
-  for (s in 1:nSubjects) {
-    lr[s]  = Phi_approx( lr_mu_raw  + lr_sd_raw * lr_raw[s] );
-    tau[s] = Phi_approx( tau_mu_raw + tau_sd_raw * tau_raw[s] ) * 3;
-  }
+  lr  = Phi_approx( lr_mu_raw  + lr_sd_raw * lr_raw );
+  tau = Phi_approx( tau_mu_raw + tau_sd_raw * tau_raw ) * 3;
 }
 
 model {

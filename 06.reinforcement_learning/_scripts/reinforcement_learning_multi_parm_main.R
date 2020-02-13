@@ -35,7 +35,7 @@ run_rl_mp <- function(modelType = 'indv') {
     #### Running Stan #### 
     # =============================================================================
     rstan_options(auto_write = TRUE)
-    options(mc.cores = 2)
+    options(mc.cores = 4)
     
     if (modelType=='indv') {
         modelFile <- '_scripts/reinforcement_learning_mp_indv_model.stan'
@@ -59,6 +59,7 @@ run_rl_mp <- function(modelType = 'indv') {
                    warmup  = nWarmup,
                    thin    = nThin,
                    init    = "random",
+                   control = list(adapt_delta=.999),
                    seed    = 1450154637
                    )
     
