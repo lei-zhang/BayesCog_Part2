@@ -33,7 +33,7 @@ dataList <- list(nSubjects=nSubjects,
 #### Running Stan #### 
 # =============================================================================
 rstan_options(auto_write = TRUE)
-options(mc.cores = 2)
+options(mc.cores = 4)
 
 modelFile1 <- '_scripts/comparing_models_model1.stan'  # simple RL model
 modelFile2 <- '_scripts/comparing_models_model2.stan'  # fictitious RL model
@@ -88,11 +88,16 @@ cat("It took",as.character.Date(endTime - startTime), "\n")
 LL1 <- extract_log_lik(fit_rl1)
 LL2 <- extract_log_lik(fit_rl2)
 
-loo1 <- loo(LL1)
-loo2 <- loo(LL2)
-compare(loo1, loo2) # positive difference indicates the 2nd model's predictive accuracy is higher
+rel_n_eff1 = loo::relative_eff(exp(LL1), chain_id = rep(1:nChains, each = nIter - nWarmup))
+rel_n_eff2 = loo::relative_eff(exp(LL2), chain_id = rep(1:nChains, each = nIter - nWarmup))
+
+loo1 <- loo(LL1, r_eff = rel_n_eff1)
+loo2 <- loo(LL2, r_eff = rel_n_eff2)
+loo::loo_compare(loo1, loo2) # positive difference indicates the 2nd model's predictive accuracy is higher
 
 
-
+loo_list = list(loo1, loo2)
+model_weights = loo::loo_model_weights(loo_list, method = 'stacking', optim_control = list(reltol=1e-10))
+# loo_model_weights(loo_list, method = 'pseudobma') - optional
 
 
