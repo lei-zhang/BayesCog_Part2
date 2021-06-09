@@ -1,9 +1,23 @@
-**Teaching materials for my *BayesCog* workshop, Part 2 <br />
-UKE, Hamburg, 2020** <br />
+**Bayesian Statistics and Bayesian Cognitive Modeling (*BayesCog*), Part 2 <br />
+UKE, Hamburg (online), 2021** <br />
+[Dr. Lei Zhang](http://lei-zhang.net/)
 
 ___
 
+[![GitHub repo size](https://img.shields.io/github/repo-size/lei-zhang/BayesCog_Part2?color=brightgreen&logo=github)](https://github.com/lei-zhang/BayesCog_Part2)
+[![GitHub language count](https://img.shields.io/github/languages/count/lei-zhang/BayesCog_Part2?color=brightgreen&logo=github)](https://github.com/lei-zhang/BayesCog_Part2)
+[![GitHub last commit](https://img.shields.io/github/last-commit/lei-zhang/bayescog_part2?color=orange&logo=github)](https://github.com/lei-zhang/BayesCog_Part2) <br />
+[![Twitter Follow](https://img.shields.io/twitter/follow/lei_zhang_lz?label=%40lei_zhang_lz)](https://twitter.com/lei_zhang_lz)
+
+Teaching materials for my *BayesCog* workshop, Part 2.
+
 ### What's new:
+May 2021:
+ - Added [Crawley & Zhang 2020](https://doi.org/10.1371/journal.pbio.3000908) for explaining optimal learning rates
+ - Updated some recent literature
+ - Added [Cognitive Modeling Academy Hamburg](https://cmah.eu/) when introducing further courses
+
+Feb. 2020:
  - Add details of the interpretation on RL parameters
  
 ### List of Folders and their Content
@@ -16,6 +30,11 @@ Folder | Task | Model
 09.debugging |  Memory Retention | Exponential decay model
 10.model_based | 2-armed bandit task | Simple RL model
 11.delay_discounting | Delay discounting task | Hyperbolic and exponential discounting model
+___
+
+For bug reports, please contact Lei Zhang ([lei.zhang@univie.ac.at](mailto:lei.zhang@univie.ac.at), or [@lei_zhang_lz](https://twitter.com/lei_zhang_lz)).
+
+Thanks to [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and [shields.io](https://shields.io/).
 ___
 
 ### LICENSE
