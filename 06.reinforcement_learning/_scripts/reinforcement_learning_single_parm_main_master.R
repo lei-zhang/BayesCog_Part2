@@ -4,8 +4,8 @@
 # simple reinforcement learning model
 # single true parameters, true lr = 0.6, tau = 1.5, pRew = 0.7
 #
-# Lei Zhang
-# lei.zhang@univie.ac.at
+# (C) Dr. Lei Zhang, ALPN Lab, University of Birmingham
+# l.zhang.13@bham.ac.uk
 
 run_rl_sp <- function(multiSubj = FALSE) {
     # =============================================================================

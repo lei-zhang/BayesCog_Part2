@@ -4,8 +4,8 @@
 # simple reinforcement learning model
 # single true parameters, true lr = 0.6, tau = 1.5, pRew = 0.7
 #
-# Lei Zhang
-# lei.zhang@univie.ac.at
+# (C) Dr. Lei Zhang, ALPN Lab, University of Birmingham
+# l.zhang.13@bham.ac.uk
 
 run_rl_sp <- function(multiSubj = FALSE) {
     # =============================================================================
@@ -44,7 +44,8 @@ run_rl_sp <- function(multiSubj = FALSE) {
     options(mc.cores = 4)
     
     if (multiSubj==FALSE) {
-        modelFile <- '_scripts/reinforcement_learning_sp_ss_model.stan'
+        #modelFile <- '_scripts/reinforcement_learning_sp_ss_model.stan'
+        modelFile <- '_scripts/my_1st_rw.stan'
     } else {
         modelFile <- '_scripts/reinforcement_learning_sp_ms_model.stan'
     } 
@@ -77,6 +78,7 @@ run_rl_sp <- function(multiSubj = FALSE) {
     print(fit_rl)
     
     plot_trace_excl_warm_up <- stan_trace(fit_rl, pars = c('lr','tau'), inc_warmup = F)
+
     plot_dens <- stan_plot(fit_rl, pars=c('lr','tau'), show_density=T, fill_color = 'skyblue')
     
     return(fit_rl)

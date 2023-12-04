@@ -3,8 +3,8 @@
 # =============================================================================
 # debugging excercise: simple exponential decay model for memory retention task
 #
-# Lei Zhang
-# lei.zhang@univie.ac.at
+# (C) Dr. Lei Zhang, ALPN Lab, University of Birmingham
+# l.zhang.13@bham.ac.uk
 #
 # Adapted from Lee & Wagenmakers, 2013
 

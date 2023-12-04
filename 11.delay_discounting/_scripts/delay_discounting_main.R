@@ -5,8 +5,8 @@
 #
 # adapted from the 'hBayesDM' package (Ahn, et al., 2016)
 #
-# Lei Zhang, UKE, Hamburg, DE
-# lei.zhang@uke.de
+# (C) Dr. Lei Zhang, ALPN Lab, University of Birmingham
+# l.zhang.13@bham.ac.uk
 
 # =============================================================================
 #### Construct Data #### 

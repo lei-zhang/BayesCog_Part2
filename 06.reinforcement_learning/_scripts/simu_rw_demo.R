@@ -31,7 +31,7 @@ while ( tmp1 ) {
 
 alpha = 0.3 # learning rate
 tau = 2     # inverse temperature
-nt = 100    # number of trials
+nt = 40    # number of trials
 p = 0.7     # reward probality of option 1
 
 # w - winner, 1 or 2, who actually returns probablistic reward

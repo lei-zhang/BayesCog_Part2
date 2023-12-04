@@ -5,8 +5,8 @@
 #
 # true parameters: lr  = rnorm(10, mean=0.6, sd=0.12); tau = rnorm(10, mean=1.5, sd=0.2)
 #
-# Lei Zhang, UKE, Hamburg, DE
-# lei.zhang@uke.de
+# (C) Dr. Lei Zhang, ALPN Lab, University of Birmingham
+# l.zhang.13@bham.ac.uk
 
 # =============================================================================
 #### Construct Data #### 

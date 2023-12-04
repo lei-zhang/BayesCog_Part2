@@ -6,8 +6,8 @@
 # 
 # modelType = 'indv' for individual fitting, or 'hrch' for hierarchical fitting
 #
-# Lei Zhang
-# lei.zhang@univie.ac.at
+# (C) Dr. Lei Zhang, ALPN Lab, University of Birmingham
+# l.zhang.13@bham.ac.uk
 
 run_rl_mp <- function(modelType = 'indv') {
     # =============================================================================

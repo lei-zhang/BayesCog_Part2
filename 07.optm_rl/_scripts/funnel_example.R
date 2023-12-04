@@ -3,8 +3,8 @@
 # =============================================================================
 # Optimizing Stan code, Neal's Funnel example
 #
-# Lei Zhang, UKE, Hamburg, DE
-# lei.zhang@uke.de
+# (C) Dr. Lei Zhang, ALPN Lab, University of Birmingham
+# l.zhang.13@bham.ac.uk
 #
 # Adapted from Stan Reference 2.12, 2016
 
